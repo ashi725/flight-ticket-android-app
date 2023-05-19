@@ -4,18 +4,18 @@ import java.util.List;
 
 public class Ticket {
 
-    private String date;
+    private List<Integer> date;
     private double price;
     private Country destination;
 
     // Constructor
-    public Ticket(String date, double price, Country destination){
+    public Ticket(List<Integer> date, double price, Country destination){
         this.date = date;
         this.price = price;
         this.destination = destination;
     }
 
-    public String getDate() {
+    public List<Integer> getDate() {
         return date;
     }
 
