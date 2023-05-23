@@ -13,7 +13,7 @@
         android:text="@string/greeting"
         android:textColor="#ffffff"
         android:textSize="28sp"
-        android:textStyle="bold"
+        android:fontFamily="@font/jost"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.075"
@@ -22,16 +22,23 @@
         app:layout_constraintVertical_bias="0.071" />
 
     <android.widget.SearchView
+        android:id="@+id/searchView"
         android:layout_width="257dp"
         android:layout_height="33dp"
         android:layout_marginStart="24dp"
         android:layout_marginLeft="24dp"
         android:layout_marginTop="80dp"
+        android:queryHint="Search"
+        android:iconifiedByDefault="false"
+        android:searchIcon="@drawable/search"
         android:background="#39405E"
         android:radius="8dp"
-
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_gravity="center"
+    >
+
+    </android.widget.SearchView>
 
     <ImageView
         android:id="@+id/imageView"
@@ -68,5 +75,15 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.95"
         app:srcCompat="@drawable/home" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="235dp"
+        android:layout_height="77dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.506"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.241" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
