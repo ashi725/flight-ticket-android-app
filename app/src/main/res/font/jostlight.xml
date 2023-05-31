@@ -3,5 +3,5 @@
     <font
         android:fontStyle="normal"
         android:fontWeight="400"
-        android:font="@font/jost_light"/>
+        android:font="@font/jostlight1"/>
 </font-family>

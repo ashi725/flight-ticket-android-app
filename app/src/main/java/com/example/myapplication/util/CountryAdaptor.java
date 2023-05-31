@@ -2,6 +2,7 @@ package com.example.myapplication.util;
 
 import android.content.Context;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -39,10 +40,18 @@ public class CountryAdaptor extends ArrayAdapter {
         }
 
         Country currentCountry = mCountries.get(position);
+        String imageName = currentCountry.getImage3();
+        Log.d("COUNTRY", imageName);
+
 
         ImageView iconImageView = (ImageView) currentViewItem.findViewById(R.id.top_country_icon);
         int i = mContext.getResources().getIdentifier(
-                currentCountry.getImage3(), "drawable", mContext.getPackageName());
+                currentCountry.getImage3(), "drawable", mContext.getPackageName()
+        );
+
+        String resourceName = mContext.getResources().getResourceEntryName(i);
+        Log.d("RESOURCE", "Image Name: " + resourceName);
+
 
         iconImageView.setImageResource(i);
 

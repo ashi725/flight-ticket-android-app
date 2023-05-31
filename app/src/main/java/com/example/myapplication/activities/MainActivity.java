@@ -35,8 +35,10 @@ public class MainActivity extends AppCompatActivity {
 
         for (Country country : countryList) {
             String countryName = country.getName();
+            String imageName = country.getImage3();
             countries.add(countryName);
             Log.d("hello", countryName);
+            Log.d("hello", imageName);
         }
 
         CountryAdaptor countriesAdapter = new CountryAdaptor(this,
