@@ -18,7 +18,9 @@ import com.example.myapplication.R;
 import com.example.myapplication.activities.DetailsActivity;
 import com.example.myapplication.activities.ListActivity;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 public class CountryAdaptor extends ArrayAdapter {
 
