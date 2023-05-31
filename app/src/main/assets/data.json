@@ -17,6 +17,30 @@
           }
         },
         {
+          "name": "Kenya",
+          "image1": "kenya1",
+          "image2": "kenya2",
+          "image3": "kenya3",
+          "description": "Kenya is a country in africa",
+          "ticket_prices": {
+            "2023-06-01": 100,
+            "2023-06-02": 110,
+            "2023-06-03": 120
+          }
+        },
+        {
+          "name": "Ghana",
+          "image1": "ghana1",
+          "image2": "ghana2",
+          "image3": "ghana3",
+          "description": "Ghana is a country in africa",
+          "ticket_prices": {
+            "2023-06-01": 100,
+            "2023-06-02": 110,
+            "2023-06-03": 120
+          }
+        },
+        {
           "name": "South Africa",
           "image1": "south_africa1",
           "image2": "south_africa2",
@@ -56,6 +80,90 @@
             "2023-06-01": 120,
             "2023-06-02": 125,
             "2023-06-03": 130
+          }
+        }
+      ]
+    },
+    {
+      "name": "EUROPE",
+      "image": "europe",
+      "countries": [
+        {
+          "name": "France",
+          "image1": "france1",
+          "image2": "france2",
+          "image3": "france3",
+          "description": "France is a country located in Western Europe...",
+          "ticket_prices": {
+            "2023-06-01": 180,
+            "2023-06-02": 190,
+            "2023-06-03": 200
+          }
+        },
+        {
+          "name": "Germany",
+          "image1": "germany1",
+          "image2": "germany2",
+          "image3": "germany3",
+          "description": "Germany is a country in Central Europe known for its engineering and technology...",
+          "ticket_prices": {
+            "2023-06-01": 160,
+            "2023-06-02": 165,
+            "2023-06-03": 170
+          }
+        },
+        {
+          "name": "Italy",
+          "image1": "italy1",
+          "image2": "italy2",
+          "image3": "italy3",
+          "description": "Italy is a country in Southern Europe known for its art, history, and cuisine...",
+          "ticket_prices": {
+            "2023-06-01": 170,
+            "2023-06-02": 175,
+            "2023-06-03": 180
+          }
+        }
+      ]
+    },
+    {
+      "name": "NORTH AMERICA",
+      "image": "north_america",
+      "countries": [
+        {
+          "name": "United States",
+          "image1": "us1",
+          "image2": "us2",
+          "image3": "us3",
+          "description": "The United States is a country located in North America...",
+          "ticket_prices": {
+            "2023-06-01": 200,
+            "2023-06-02": 210,
+            "2023-06-03": 220
+          }
+        },
+        {
+          "name": "Canada",
+          "image1": "canada1",
+          "image2": "canada2",
+          "image3": "canada3",
+          "description": "Canada is a country in North America known for its vast landscapes...",
+          "ticket_prices": {
+            "2023-06-01": 190,
+            "2023-06-02": 195,
+            "2023-06-03": 200
+          }
+        },
+        {
+          "name": "Mexico",
+          "image1": "mexico1",
+          "image2": "mexico2",
+          "image3": "mexico3",
+          "description": "Mexico is a country located in the southern part of North America...",
+          "ticket_prices": {
+            "2023-06-01": 150,
+            "2023-06-02": 155,
+            "2023-06-03": 160
           }
         }
       ]
