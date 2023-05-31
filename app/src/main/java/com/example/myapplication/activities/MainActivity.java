@@ -33,7 +33,7 @@ import com.example.myapplication.util.TopCountryAdaptor;
 import kotlin.coroutines.Continuation;
 
 public class MainActivity extends AppCompatActivity {
-
+    private SearchView searchView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -60,15 +60,22 @@ public class MainActivity extends AppCompatActivity {
         ListView continentsView = (ListView) findViewById(R.id.continents);
         continentsView.setAdapter((continentsAdapter));
 
+        SearchView searchView = (SearchView) findViewById(R.id.searchView);
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                SearchActivity.bySearch = 1;
+                SearchActivity.searchString = query;
+                Intent SearchIntent = new Intent(getBaseContext(), SearchActivity.class);
+                startActivity(SearchIntent);
+                return true;
+            }
 
-//        CardView oceaniaCardView = (CardView) findViewById(R.id.oceania);
-//        oceaniaCardView.setOnClickListener(new View.OnClickListener(){
-//            @Override
-//            public void onClick(View view){
-//                Intent listIntent = new Intent(getBaseContext(), ListActivity.class);
-//                startActivity(listIntent);
-//            }
-//        });
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                return false;
+            }
+        });
 
     }
 
