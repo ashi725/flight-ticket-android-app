@@ -1,12 +1,14 @@
 package com.example.myapplication.activities;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -49,6 +51,15 @@ public class SelectionActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 updateTicketPrices();
+            }
+        });
+
+        ImageView homeButton = (ImageView) findViewById(R.id.homeButton);
+        homeButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                Intent homeIntent = new Intent(getBaseContext(), MainActivity.class);
+                startActivity(homeIntent);
             }
         });
     }

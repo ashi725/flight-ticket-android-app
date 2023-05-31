@@ -66,6 +66,15 @@ public class DetailsActivity extends AppCompatActivity {
                 onCheckPrices();
             }
         });
+
+        ImageView homeButton = (ImageView) findViewById(R.id.homeDetails);
+        homeButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                Intent homeIntent = new Intent(getBaseContext(), MainActivity.class);
+                startActivity(homeIntent);
+            }
+        });
     }
 
     public void onCheckPrices() {

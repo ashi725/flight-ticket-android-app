@@ -145,21 +145,21 @@
         app:layout_constraintStart_toStartOf="parent">
 
         <ImageView
-            android:id="@+id/imageView5"
+            android:id="@+id/homeDetails"
             android:layout_width="31dp"
             android:layout_height="28dp"
             android:layout_weight="1"
             android:src="@drawable/home" />
 
         <ImageView
-            android:id="@+id/imageView"
+            android:id="@+id/categoriesDetails"
             android:layout_width="31dp"
             android:layout_height="28dp"
             android:layout_weight="1"
             android:src="@drawable/categories" />
 
         <ImageView
-            android:id="@+id/imageView6"
+            android:id="@+id/searchDetails"
             android:layout_width="31dp"
             android:layout_height="28dp"
             android:layout_weight="1"
