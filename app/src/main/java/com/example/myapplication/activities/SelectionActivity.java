@@ -4,6 +4,8 @@ import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -11,7 +13,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.myapplication.App;
 import com.example.myapplication.R;
-import com.example.myapplication.util.Continents;
+import com.example.myapplication.util.Continent;
 import com.example.myapplication.util.Country;
 import com.example.myapplication.util.DataProvider;
 import java.text.SimpleDateFormat;
@@ -26,9 +28,8 @@ public class SelectionActivity extends AppCompatActivity {
     private DataProvider dataProvider;
     private Country country;
 
-    private List<Continents> continents;
+    private List<Continent> continents;
 
-    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,25 +37,34 @@ public class SelectionActivity extends AppCompatActivity {
 
         this.dataProvider = App.getDataProvider();
 
-        departureDateInput = findViewById(R.id.departureDate);
-        returnDateInput = findViewById(R.id.returnDate);
+        departureDateInput = findViewById(R.id.departureDateInput);
+        returnDateInput = findViewById(R.id.returnDateInput);
         departurePriceTextView = findViewById(R.id.departurePriceTextView);
         returnPriceTextView = findViewById(R.id.returnPriceTextView);
         totalPriceTextView = findViewById(R.id.totalPriceTextView);
+        Button priceButton = findViewById(R.id.priceButton);
 
+        // Set OnClickListener on the priceButton
+        priceButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                updateTicketPrices();
+            }
+        });
     }
 
     private void updateTicketPrices() {
         String departureDateStr = departureDateInput.getText().toString();
         String returnDateStr = returnDateInput.getText().toString();
+        System.out.println("--------------------------------" + departureDateStr);
 
         try {
-            // Implement proper dates later
-            //Date departureDate = dateFormat.parse(departureDateStr);
-            //Date returnDate = dateFormat.parse(returnDateStr);
-
-            double departurePrice = dataProvider.getPrice(country,"day1");
-            double returnPrice = dataProvider.getPrice(country,"day2");
+            dataProvider = new DataProvider(this, "data.json");
+            double departurePrice = dataProvider.getPrice("Egypt", departureDateStr);
+            double returnPrice = dataProvider.getPrice("Egypt", returnDateStr);
+            System.out.println("--------------------------------" + returnPrice);
+//            double departurePrice = 100.00;
+//            double returnPrice = 80.00;
             double totalPrice = departurePrice + returnPrice;
 
             departurePriceTextView.setText(String.valueOf(departurePrice));
@@ -65,5 +75,4 @@ public class SelectionActivity extends AppCompatActivity {
             e.printStackTrace();
         }
     }
-
 }
