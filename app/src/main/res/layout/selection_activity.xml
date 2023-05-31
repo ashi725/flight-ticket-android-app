@@ -10,7 +10,7 @@
     android:paddingTop="30dp"
     android:paddingRight="30dp"
     android:paddingBottom="20dp"
-    tools:context=".activities.SelectionActivity">
+    tools:context=".activities.MainActivity">
 
     <TextView
         android:layout_width="wrap_content"
@@ -35,7 +35,7 @@
         android:textSize="24sp" />
 
     <EditText
-        android:id="@+id/departureDate"
+        android:id="@+id/departureDateInput"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -55,7 +55,7 @@
         android:textSize="24sp" />
 
     <EditText
-        android:id="@+id/returnDate"
+        android:id="@+id/returnDateInput"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"

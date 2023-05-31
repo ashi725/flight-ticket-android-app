@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#2F334D"
-    tools:context=".controllers.MainActivity">
+    tools:context=".activities.MainActivity">
 
     <ImageView
         android:layout_width="397dp"
@@ -35,13 +35,13 @@
         app:srcCompat="@drawable/france" />
 
 
-
     <Button
         android:id="@+id/pricesButton"
         android:layout_width="154dp"
         android:layout_height="48dp"
-        android:text="Check Prices"
         android:backgroundTint="#7983AE"
+        android:onClick="onCheckPrices"
+        android:text="Check Prices"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.879"

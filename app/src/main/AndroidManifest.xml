@@ -28,6 +28,9 @@
             android:name=".activities.DetailsActivity"
             android:exported="true">
         </activity>
+        <activity
+            android:name=".activities.SelectionActivity"
+            ndroid:exported="true">
+        </activity>
     </application>
-
 </manifest>
