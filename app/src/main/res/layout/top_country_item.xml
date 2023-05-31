@@ -13,12 +13,13 @@
         <ImageView
             android:layout_width="80dp"
             android:layout_height="80dp"
+            android:layout_margin="5dp"
             android:src="@drawable/south_africa3"
             android:background="#2B3047"
             android:id="@+id/top_country_icon">
         </ImageView>
         <TextView
-            android:layout_width="80dp"
+            android:layout_width="90dp"
             android:layout_height="wrap_content"
             android:background="#333853"
             android:gravity="center"

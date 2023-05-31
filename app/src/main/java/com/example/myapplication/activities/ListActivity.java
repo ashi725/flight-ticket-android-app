@@ -57,6 +57,9 @@ public class ListActivity extends AppCompatActivity {
                 Intent listIntent = new Intent(getBaseContext(), MainActivity.class);
                 byContinent = 0;
                 startActivity(listIntent);
+                Intent homeIntent = new Intent(getBaseContext(), MainActivity.class);
+                byContinent = 0;
+                startActivity(homeIntent);
             }
         });
     }
