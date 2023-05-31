@@ -28,7 +28,10 @@
             android:name="com.example.myapplication.activities.DetailsActivity"
             android:label="Details">
         </activity>
-
+        <activity
+            android:name=".activities.SelectionActivity"
+            android:label="Selection Activity" />
+        
     </application>
 
 </manifest>
