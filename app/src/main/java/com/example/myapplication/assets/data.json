@@ -10,9 +10,9 @@
           "image3": "egypt3.jpg",
           "description": "Egypt is a country located in northeastern Africa...",
           "ticket_prices": {
-            "2023-06-01": 100,
-            "2023-06-02": 110,
-            "2023-06-03": 120
+            "day1": 100,
+            "day2": 110,
+            "day3": 120
           }
         },
         {
@@ -22,9 +22,9 @@
           "image3": "south_africa3.png",
           "description": "South Africa is a country located at the southernmost tip of Africa...",
           "ticket_prices": {
-            "2023-06-01": 90,
-            "2023-06-02": 95,
-            "2023-06-03": 100
+            "day1": 100,
+            "day2": 110,
+            "day3": 120
           }
         }
       ]
@@ -39,9 +39,9 @@
           "image3": "china3.jpg",
           "description": "China is a country in East Asia with a rich history...",
           "ticket_prices": {
-            "2023-06-01": 150,
-            "2023-06-02": 160,
-            "2023-06-03": 170
+            "day1": 100,
+            "day2": 110,
+            "day3": 120
           }
         },
         {
@@ -51,9 +51,9 @@
           "image3": "india3.jpg",
           "description": "India is a diverse country in South Asia...",
           "ticket_prices": {
-            "2023-06-01": 120,
-            "2023-06-02": 125,
-            "2023-06-03": 130
+            "day1": 100,
+            "day2": 110,
+            "day3": 120
           }
         }
       ]
