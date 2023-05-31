@@ -40,25 +40,29 @@ public class CountryAdaptor extends ArrayAdapter {
         }
 
         Country currentCountry = mCountries.get(position);
-        String imageName = currentCountry.getImage3();
-        Log.d("COUNTRY", imageName);
 
+        if (mLayoutID == R.layout.top_country_item){
+            ImageView iconImageView = (ImageView) currentViewItem.findViewById(R.id.top_country_icon);
+            int i = mContext.getResources().getIdentifier(
+                    currentCountry.getImage3(), "drawable", mContext.getPackageName()
+            );
 
-        ImageView iconImageView = (ImageView) currentViewItem.findViewById(R.id.top_country_icon);
-        int i = mContext.getResources().getIdentifier(
-                currentCountry.getImage3(), "drawable", mContext.getPackageName()
-        );
+            iconImageView.setImageResource(i);
 
-        String resourceName = mContext.getResources().getResourceEntryName(i);
-        Log.d("RESOURCE", "Image Name: " + resourceName);
+            TextView countryName = (TextView)currentViewItem.findViewById(R.id.top_country_name);
+            countryName.setText((currentCountry.getName()));
+        }
+        else {
+            ImageView iconImageView = (ImageView) currentViewItem.findViewById(R.id.country_icon);
+            int i = mContext.getResources().getIdentifier(
+                    currentCountry.getImage3(), "drawable", mContext.getPackageName()
+            );
 
+            iconImageView.setImageResource(i);
 
-        iconImageView.setImageResource(i);
-
-        TextView countryName = (TextView)currentViewItem.findViewById(R.id.top_country_name);
-        countryName.setText((currentCountry.getName()));
-
-
+            TextView countryName = (TextView)currentViewItem.findViewById(R.id.country_name);
+            countryName.setText((currentCountry.getName()));
+        }
 
         return currentViewItem;
     }

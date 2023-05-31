@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:elevation="20dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/south_africa3"
+            android:background="#2C314A"
+            android:id="@+id/country_icon">
+        </ImageView>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#333853"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:text="country"
+            android:id="@+id/country_name"
+            android:paddingBottom="10dp">
+            >
+
+        </TextView>
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

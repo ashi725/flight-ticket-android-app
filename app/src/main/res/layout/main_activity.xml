@@ -9,7 +9,7 @@
     android:paddingLeft="15dp"
     android:paddingBottom="15dp"
     android:orientation="vertical"
-    tools:context=".controllers.MainActivity">
+    tools:context=".activities.MainActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -72,6 +72,7 @@
                 android:layout_margin="8dp"
                 android:backgroundTint="#333853"
                 android:onClick="viewCategory"
+                android:id="@+id/oceania"
                 app:cardCornerRadius="4dp">
 
                 <LinearLayout

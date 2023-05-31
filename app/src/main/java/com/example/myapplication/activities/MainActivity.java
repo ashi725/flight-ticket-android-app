@@ -1,14 +1,18 @@
-package com.example.myapplication.controllers;
+package com.example.myapplication.activities;
 
 import com.example.myapplication.util.Country;
 
 import com.example.myapplication.App;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 
+import android.content.Intent;
 import android.os.Bundle;
 
+import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.SearchView;
 
@@ -36,6 +40,16 @@ public class MainActivity extends AppCompatActivity {
 
         ListView listView = (ListView) findViewById(R.id.topCountries);
         listView.setAdapter((countriesAdapter));
+
+        CardView oceaniaCardView = (CardView) findViewById(R.id.oceania);
+        oceaniaCardView.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                Intent listIntent = new Intent(getBaseContext(), ListActivity.class);
+                startActivity(listIntent);
+            }
+        });
+
     }
 
 }
