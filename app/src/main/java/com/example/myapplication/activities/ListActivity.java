@@ -55,6 +55,7 @@ public class ListActivity extends AppCompatActivity {
             @Override
             public void onClick(View view){
                 Intent listIntent = new Intent(getBaseContext(), MainActivity.class);
+                byContinent = 0;
                 startActivity(listIntent);
             }
         });

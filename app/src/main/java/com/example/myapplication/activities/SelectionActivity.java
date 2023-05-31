@@ -11,7 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.myapplication.App;
 import com.example.myapplication.R;
-import com.example.myapplication.util.Continents;
+import com.example.myapplication.util.Continent;
 import com.example.myapplication.util.Country;
 import com.example.myapplication.util.DataProvider;
 import java.text.SimpleDateFormat;
@@ -26,7 +26,7 @@ public class SelectionActivity extends AppCompatActivity {
     private DataProvider dataProvider;
     private Country country;
 
-    private List<Continents> continents;
+    private List<Continent> continents;
 
     @SuppressLint("MissingInflatedId")
     @Override

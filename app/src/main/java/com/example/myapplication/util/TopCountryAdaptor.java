@@ -1,6 +1,9 @@
 package com.example.myapplication.util;
+import com.example.myapplication.activities.DetailsActivity;
+
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,6 +17,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.RecyclerView.ViewHolder;
 
 import com.example.myapplication.R;
+import com.example.myapplication.activities.ListActivity;
 
 import java.util.List;
 
@@ -43,6 +47,13 @@ public class TopCountryAdaptor extends RecyclerView.Adapter<TopCountryAdaptor.Vi
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.top_country_item, parent, false);
+        view.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent DetailsIntent = new Intent(mContext, DetailsActivity.class);
+                mContext.startActivity(DetailsIntent);
+            }
+        });
         return new ViewHolder(view);
     }
 
