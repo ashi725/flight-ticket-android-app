@@ -9,7 +9,7 @@
           "image1": "egypt1",
           "image2": "egypt2",
           "image3": "egypt3",
-          "description": "Egypt is a country located in northeastern Africa...",
+          "description": "Explore the ancient wonders of Egypt, a country rich in history and culture. From the majestic pyramids to the stunning Nile River, immerse yourself in a land of pharaohs and ancient mysteries.",
           "ticket_prices": {
             "2023-06-01": 100,
             "2023-06-02": 110,
@@ -21,7 +21,7 @@
           "image1": "kenya1",
           "image2": "kenya2",
           "image3": "kenya3",
-          "description": "Kenya is a country in africa",
+          "description": "Embark on a thrilling safari adventure in Kenya's vast savannahs. Witness the breathtaking landscapes of the Maasai Mara and encounter magnificent wildlife in their natural habitat. Immerse yourself in the rich cultural heritage of Kenya.",
           "ticket_prices": {
             "2023-06-01": 100,
             "2023-06-02": 110,
@@ -33,7 +33,7 @@
           "image1": "ghana1",
           "image2": "ghana2",
           "image3": "ghana3",
-          "description": "Ghana is a country in africa",
+          "description": "Discover Ghana's vibrant culture and warm hospitality. Explore historical landmarks and bustling markets, and indulge in the unique blend of history, music, and flavors. Experience the captivating beauty of this West African gem.",
           "ticket_prices": {
             "2023-06-01": 100,
             "2023-06-02": 110,
@@ -45,7 +45,7 @@
           "image1": "south_africa1",
           "image2": "south_africa2",
           "image3": "south_africa3",
-          "description": "South Africa is a country located at the southernmost tip of Africa...",
+          "description": "Experience the breathtaking beauty of South Africa, from iconic Table Mountain to stunning coastal landscapes. Immerse yourself in rich wildlife and vibrant cities, where adventure and culture await at every turn.",
           "ticket_prices": {
             "2023-06-01": 90,
             "2023-06-02": 95,
@@ -63,7 +63,7 @@
           "image1": "china1",
           "image2": "china2",
           "image3": "china3",
-          "description": "China is a country in East Asia with a rich history...",
+          "description": "Discover the wonders of China, a country with a rich history and diverse landscapes. Explore the Great Wall, experience the bustling cities of Beijing and Shanghai, and immerse yourself in ancient traditions and modern marvels.",
           "ticket_prices": {
             "2023-06-01": 150,
             "2023-06-02": 160,
@@ -75,7 +75,7 @@
           "image1": "india1",
           "image2": "india2",
           "image3": "india3",
-          "description": "India is a diverse country in South Asia...",
+          "description": "Experience the vibrant culture and diverse landscapes of India. Explore historical landmarks like the Taj Mahal, witness the spirituality of Varanasi, and indulge in the flavors of Indian cuisine. Immerse yourself in a country of enchanting contrasts.",
           "ticket_prices": {
             "2023-06-01": 120,
             "2023-06-02": 125,
@@ -93,7 +93,7 @@
           "image1": "france1",
           "image2": "france2",
           "image3": "france3",
-          "description": "France is a country located in Western Europe...",
+          "description": "Experience the allure of France, a country renowned for its art, history, and cuisine. From the romantic streets of Paris to the sun-kissed beaches of the French Riviera, immerse yourself in the elegance and charm of this captivating European destination.",
           "ticket_prices": {
             "2023-06-01": 180,
             "2023-06-02": 190,
@@ -105,7 +105,7 @@
           "image1": "germany1",
           "image2": "germany2",
           "image3": "germany3",
-          "description": "Germany is a country in Central Europe known for its engineering and technology...",
+          "description": "Discover Germany's rich heritage of engineering and technology. Explore charming cities like Berlin and Munich, indulge in delicious cuisine, and immerse yourself in a country known for its cultural diversity and stunning landscapes.",
           "ticket_prices": {
             "2023-06-01": 160,
             "2023-06-02": 165,
@@ -117,7 +117,7 @@
           "image1": "italy1",
           "image2": "italy2",
           "image3": "italy3",
-          "description": "Italy is a country in Southern Europe known for its art, history, and cuisine...",
+          "description": "Experience the art, history, and culinary delights of Italy. From the ancient ruins of Rome to the picturesque canals of Venice, immerse yourself in a country that perfectly blends old-world charm with breathtaking landscapes and vibrant city life.",
           "ticket_prices": {
             "2023-06-01": 170,
             "2023-06-02": 175,
@@ -135,7 +135,7 @@
           "image1": "us1",
           "image2": "us2",
           "image3": "us3",
-          "description": "The United States is a country located in North America...",
+          "description": "Explore the diverse landscapes and iconic landmarks of the United States. From the bustling streets of New York City to the natural wonders of the Grand Canyon, embark on an unforgettable journey through a country of endless possibilities.",
           "ticket_prices": {
             "2023-06-01": 200,
             "2023-06-02": 210,
@@ -147,7 +147,7 @@
           "image1": "canada1",
           "image2": "canada2",
           "image3": "canada3",
-          "description": "Canada is a country in North America known for its vast landscapes...",
+          "description": "Discover the vast landscapes and untouched wilderness of Canada. From the majestic Rocky Mountains to the vibrant city life of Toronto and Vancouver, immerse yourself in a country known for its natural beauty and welcoming spirit.",
           "ticket_prices": {
             "2023-06-01": 190,
             "2023-06-02": 195,
@@ -159,7 +159,7 @@
           "image1": "mexico1",
           "image2": "mexico2",
           "image3": "mexico3",
-          "description": "Mexico is a country located in the southern part of North America...",
+          "description": "Experience the rich culture and breathtaking landscapes of Mexico. From the ancient ruins of Chichen Itza to the stunning beaches of Cancun, immerse yourself in a country that offers a perfect blend of history, natural beauty, and vibrant traditions.",
           "ticket_prices": {
             "2023-06-01": 150,
             "2023-06-02": 155,
