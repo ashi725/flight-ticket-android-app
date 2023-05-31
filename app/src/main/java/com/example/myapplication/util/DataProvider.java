@@ -42,9 +42,10 @@ public class DataProvider {
                     String image2 = countryObject.getString("image2");
                     String image3 = countryObject.getString("image3");
                     String description = countryObject.getString("description");
+                    int favourite = 0;
 
 
-                    Country country = new Country(name, image1, image2, image3, description, continentName);
+                    Country country = new Country(name, image1, image2, image3, description, continentName, favourite);
                     countryList.add(country);
                 }
             }

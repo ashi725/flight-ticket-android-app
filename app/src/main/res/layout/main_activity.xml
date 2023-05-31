@@ -93,14 +93,14 @@
             android:src="@drawable/home"/>
 
         <ImageView
-            android:id="@+id/imageView5"
+            android:id="@+id/favouriteButton"
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:layout_weight="1"
             android:src="@drawable/categories"/>
 
         <ImageView
-            android:id="@+id/imageView6"
+            android:id="@+id/searchButton"
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:layout_weight="1"
