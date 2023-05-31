@@ -28,18 +28,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_activity);
 
-        List<String> countries = new ArrayList<>();
-
         DataProvider dataProvider = new DataProvider(this, "data.json");
         List<Country> countryList = dataProvider.getCountry();
-
-        for (Country country : countryList) {
-            String countryName = country.getName();
-            String imageName = country.getImage3();
-            countries.add(countryName);
-            Log.d("hello", countryName);
-            Log.d("hello", imageName);
-        }
 
         CountryAdaptor countriesAdapter = new CountryAdaptor(this,
                 R.layout.top_country_item, countryList);
