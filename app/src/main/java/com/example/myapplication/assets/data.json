@@ -10,9 +10,9 @@
           "image3": "egypt3.jpg",
           "description": "Egypt is a country located in northeastern Africa...",
           "ticket_prices": {
-            "day1": 100,
-            "day2": 110,
-            "day3": 120
+            "01-01-01": 100,
+            "02-02-02" : 110,
+            "03-03-03": 120
           }
         },
         {

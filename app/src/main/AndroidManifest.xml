@@ -28,6 +28,13 @@
             android:name=".activities.SearchActivity"
             android:exported="true">
         </activity>
+        <activity
+            android:name=".activities.DetailsActivity"
+            android:exported="true">
+        </activity>
+        <activity
+            android:name=".activities.SelectionActivity"
+            android:exported="true"> />
+       </activity>
     </application>
-
 </manifest>

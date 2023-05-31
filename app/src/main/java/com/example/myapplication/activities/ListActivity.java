@@ -60,4 +60,10 @@ public class ListActivity extends AppCompatActivity {
         });
     }
 
+    public void onViewCountryDetails(Country country) {
+        Intent intent = new Intent(this, DetailsActivity.class);
+        intent.putExtra("country", (CharSequence) country);
+        startActivity(intent);
+    }
+
 }

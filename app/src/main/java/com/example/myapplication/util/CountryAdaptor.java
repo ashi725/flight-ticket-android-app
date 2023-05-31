@@ -2,6 +2,7 @@ package com.example.myapplication.util;
 
 import android.content.Context;
 
+import android.content.Intent;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,6 +15,8 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import com.example.myapplication.R;
+import com.example.myapplication.activities.DetailsActivity;
+import com.example.myapplication.activities.ListActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -56,6 +59,16 @@ public class CountryAdaptor extends ArrayAdapter {
 
             TextView countryName = (TextView)currentViewItem.findViewById(R.id.top_country_name);
             countryName.setText((currentCountry.getName()));
+
+            currentViewItem.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    DetailsActivity.byCountry = 1;
+                    DetailsActivity.byCountryString = currentCountry.getName();
+                    Intent detailsIntent = new Intent(mContext, DetailsActivity.class);
+                    mContext.startActivity(detailsIntent);
+                }
+            });
         }
         else {
             ImageView iconImageView = (ImageView) currentViewItem.findViewById(R.id.country_icon);
@@ -67,6 +80,19 @@ public class CountryAdaptor extends ArrayAdapter {
 
             TextView countryName = (TextView)currentViewItem.findViewById(R.id.country_name);
             countryName.setText((currentCountry.getName()));
+
+            currentViewItem.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    DetailsActivity.byCountry = 1;
+                    DetailsActivity.byCountryString = currentCountry.getName();
+                    Intent intent = new Intent(mContext, DetailsActivity.class);
+                    intent.putExtra("countryName", currentCountry.getName());
+                    intent.putExtra("countryImage", currentCountry.getImage3());
+                    intent.putExtra("countryDescription", currentCountry.getDescription());
+                    mContext.startActivity(intent);
+                }
+            });
         }
 
         return currentViewItem;
