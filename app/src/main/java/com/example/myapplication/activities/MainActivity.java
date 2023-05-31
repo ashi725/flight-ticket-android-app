@@ -18,6 +18,7 @@ import android.util.Log;
 
 
 import com.example.myapplication.R;
+import com.example.myapplication.util.CountryAdaptor;
 import com.example.myapplication.util.DataProvider;
 
 public class MainActivity extends AppCompatActivity {
@@ -38,8 +39,8 @@ public class MainActivity extends AppCompatActivity {
             Log.d("hello", countryName);
         }
 
-        ArrayAdapter<String> countriesAdapter = new ArrayAdapter<String>(this,
-                android.R.layout.simple_list_item_1, countries);
+        CountryAdaptor countriesAdapter = new CountryAdaptor(this,
+                R.layout.top_country_item, countryList);
 
         ListView listView = (ListView) findViewById(R.id.topCountries);
         listView.setAdapter((countriesAdapter));
