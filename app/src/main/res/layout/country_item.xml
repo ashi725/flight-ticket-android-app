@@ -3,8 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:layout_margin="10dp"
-    android:elevation="20dp">
+    android:layout_margin="10dp">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -21,7 +20,7 @@
             android:layout_height="wrap_content"
             android:background="#333853"
             android:gravity="center"
-            android:textSize="20sp"
+            android:textSize="16sp"
             android:text="country"
             android:id="@+id/country_name"
             android:paddingBottom="10dp">

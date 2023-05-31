@@ -23,6 +23,9 @@ public class CountryAdaptor extends ArrayAdapter {
     List<Country> mCountries;
     Context mContext;
 
+    public static int byContinent = 0;
+    public static String byContinentString;
+
     public CountryAdaptor(@NonNull Context context, int resource, @NonNull List<Country> objects){
         super(context, resource, objects);
         mLayoutID = resource;
