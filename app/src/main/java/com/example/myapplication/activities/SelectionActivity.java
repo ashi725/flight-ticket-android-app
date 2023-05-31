@@ -11,7 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.myapplication.App;
 import com.example.myapplication.R;
-import com.example.myapplication.util.Continents;
+import com.example.myapplication.util.Continent;
 import com.example.myapplication.util.Country;
 import com.example.myapplication.util.DataProvider;
 import java.text.SimpleDateFormat;
@@ -26,9 +26,8 @@ public class SelectionActivity extends AppCompatActivity {
     private DataProvider dataProvider;
     private Country country;
 
-    private List<Continents> continents;
+    private List<Continent> continents;
 
-    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,8 +35,8 @@ public class SelectionActivity extends AppCompatActivity {
 
         this.dataProvider = App.getDataProvider();
 
-        departureDateInput = findViewById(R.id.departureDate);
-        returnDateInput = findViewById(R.id.returnDate);
+        departureDateInput = findViewById(R.id.departureDateInput);
+        returnDateInput = findViewById(R.id.returnDateInput);
         departurePriceTextView = findViewById(R.id.departurePriceTextView);
         returnPriceTextView = findViewById(R.id.returnPriceTextView);
         totalPriceTextView = findViewById(R.id.totalPriceTextView);
