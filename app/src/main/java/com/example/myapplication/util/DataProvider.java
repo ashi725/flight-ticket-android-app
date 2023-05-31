@@ -43,6 +43,7 @@ public class DataProvider {
                     String image3 = countryObject.getString("image3");
                     String description = countryObject.getString("description");
 
+
                     Country country = new Country(name, image1, image2, image3, description, continentName);
                     countryList.add(country);
                 }
@@ -53,6 +54,35 @@ public class DataProvider {
 
         return countryList;
     }
+
+    public double getPrice(Country country, String date) {
+        try {
+            String jsonData = loadJSONFromAsset();
+            JSONObject jsonRootObject = new JSONObject(jsonData);
+            JSONArray continentsArray = jsonRootObject.getJSONArray("continents");
+
+            for (int i = 0; i < continentsArray.length(); i++) {
+                JSONObject continentObject = continentsArray.getJSONObject(i);
+                JSONArray countriesArray = continentObject.getJSONArray("countries");
+
+                for (int j = 0; j < countriesArray.length(); j++) {
+                    JSONObject countryObject = countriesArray.getJSONObject(j);
+                    String name = countryObject.getString("name");
+
+                    if (name.equals(country.getName())) {
+                        JSONObject ticketPricesObject = countryObject.getJSONObject("ticket_prices");
+                        double price = ticketPricesObject.getDouble(date);
+                        return price;
+                    }
+                }
+            }
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
+        return 0.0;
+    }
+
 
     private String loadJSONFromAsset() {
         String json = null;
@@ -75,4 +105,5 @@ public class DataProvider {
 
         return json;
     }
+
 }
