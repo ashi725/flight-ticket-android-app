@@ -54,8 +54,8 @@ public class ListActivity extends AppCompatActivity {
         homeButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
-                Intent listIntent = new Intent(getBaseContext(), MainActivity.class);
-                startActivity(listIntent);
+                Intent homeIntent = new Intent(getBaseContext(), MainActivity.class);
+                startActivity(homeIntent);
             }
         });
     }
