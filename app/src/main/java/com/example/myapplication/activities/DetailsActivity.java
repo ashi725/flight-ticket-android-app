@@ -1,4 +1,9 @@
 package com.example.myapplication.activities;
+import com.denzcoskun.imageslider.constants.ScaleTypes;
+import com.denzcoskun.imageslider.models.SlideModel;
+import com.denzcoskun.imageslider.ImageSlider;
+
+import java.util.ArrayList;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -10,7 +15,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.myapplication.R;
-import com.example.myapplication.util.Country;
 
 public class DetailsActivity extends AppCompatActivity {
 
@@ -43,6 +47,18 @@ public class DetailsActivity extends AppCompatActivity {
         whyCountry.setText("Why " + countryName + "?");
         description.setText(countryDescription);
 
+        // Set image slider
+        ArrayList<SlideModel> imageList = new ArrayList<>();
+
+        imageList.add(new SlideModel(R.drawable.japan1, ScaleTypes.CENTER_CROP));
+        imageList.add(new SlideModel(R.drawable.japan2, ScaleTypes.CENTER_CROP));
+        imageList.add(new SlideModel(R.drawable.japan3, ScaleTypes.CENTER_CROP));
+
+        ImageSlider imageSlider = findViewById(R.id.image_slider);
+        imageSlider.setImageList(imageList);
+
+        imageSlider.stopSliding();
+
         Button checkPricesButton = findViewById(R.id.pricesButton);
         checkPricesButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -55,6 +71,4 @@ public class DetailsActivity extends AppCompatActivity {
     public void onCheckPrices() {
         startActivity(new Intent(DetailsActivity.this, SelectionActivity.class));
     }
-
-
 }
