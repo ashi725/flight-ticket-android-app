@@ -62,6 +62,24 @@ public class SelectionActivity extends AppCompatActivity {
                 startActivity(homeIntent);
             }
         });
+
+        ImageView searchButton = (ImageView) findViewById(R.id.searchButton);
+        searchButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                Intent searchIntent = new Intent(getBaseContext(), SearchActivity.class);
+                startActivity(searchIntent);
+            }
+        });
+
+        ImageView favouriteButton = (ImageView) findViewById(R.id.favouriteButton);
+        favouriteButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                Intent favouriteIntent = new Intent(getBaseContext(), FavouriteActivity.class);
+                startActivity(favouriteIntent);
+            }
+        });
     }
 
     private void updateTicketPrices() {

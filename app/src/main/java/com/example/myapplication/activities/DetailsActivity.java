@@ -79,15 +79,6 @@ public class DetailsActivity extends AppCompatActivity {
             }
         });
 
-        ImageView homeButton = (ImageView) findViewById(R.id.homeDetails);
-        homeButton.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View view){
-                Intent homeIntent = new Intent(getBaseContext(), MainActivity.class);
-                startActivity(homeIntent);
-            }
-        });
-
         heartButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
@@ -101,6 +92,24 @@ public class DetailsActivity extends AppCompatActivity {
                     FavouriteActivity.setFavouritesArray(countryName);
                     isFavourite = true;
                 }
+            }
+        });
+
+        ImageView homeButton = (ImageView) findViewById(R.id.homeDetails);
+        homeButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                Intent homeIntent = new Intent(getBaseContext(), MainActivity.class);
+                startActivity(homeIntent);
+            }
+        });
+
+        ImageView searchButton = (ImageView) findViewById(R.id.searchButton);
+        searchButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                Intent searchIntent = new Intent(getBaseContext(), SearchActivity.class);
+                startActivity(searchIntent);
             }
         });
 

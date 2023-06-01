@@ -59,6 +59,24 @@ public class ListActivity extends AppCompatActivity {
                 startActivity(homeIntent);
             }
         });
+
+        ImageView favouriteButton = (ImageView) findViewById(R.id.favouriteButton);
+        favouriteButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                Intent favouriteIntent = new Intent(getBaseContext(), FavouriteActivity.class);
+                startActivity(favouriteIntent);
+            }
+        });
+
+        ImageView searchButton = (ImageView) findViewById(R.id.searchButton);
+        searchButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                Intent searchIntent = new Intent(getBaseContext(), SearchActivity.class);
+                startActivity(searchIntent);
+            }
+        });
     }
 
     public void onViewCountryDetails(Country country) {

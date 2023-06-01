@@ -64,6 +64,15 @@ public class SearchActivity extends AppCompatActivity {
             }
         });
 
+        ImageView favouriteButton = findViewById(R.id.favouriteButton);
+        favouriteButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent favouriteIntent = new Intent(getBaseContext(), FavouriteActivity.class);
+                startActivity(favouriteIntent);
+            }
+        });
+
         SearchView searchView = findViewById(R.id.searchActivityView);
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
