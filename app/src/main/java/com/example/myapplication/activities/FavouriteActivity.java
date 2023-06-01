@@ -22,6 +22,7 @@ public class FavouriteActivity extends AppCompatActivity {
     public static int byContinent = 0;
     public static String byContinentString;
 
+    public static ArrayList<String> favouritesArray = new ArrayList<>(); // Initialize the favouritesArray
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,7 +34,7 @@ public class FavouriteActivity extends AppCompatActivity {
         List<Country> favouriteList = new ArrayList<>();
 
         for (Country country : countryList) {
-            if (country.getFavourite() == 1) {
+            if (favouritesArray.contains(country.getName())) {
                 favouriteList.add(country);
             }
         }
@@ -61,4 +62,13 @@ public class FavouriteActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public static void setFavouritesArray(String countryName){
+        favouritesArray.add(countryName);
+        return;
+    }
+
+    public static void clearFavouritesArray(){
+        favouritesArray.clear();
+        return;
+    }
 }

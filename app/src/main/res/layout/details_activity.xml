@@ -40,6 +40,19 @@
         app:layout_constraintVertical_bias="0.217"
         app:srcCompat="@drawable/france" />
 
+    <ImageView
+        android:id="@+id/heartIcon"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="#2F334D"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.783"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.432"
+        app:srcCompat="@drawable/heart" />
+
     <TextView
         android:id="@+id/countryTitle"
         android:layout_width="wrap_content"
@@ -88,15 +101,15 @@
 
     <TextView
         android:id="@+id/description"
-        android:fontFamily="@font/jostregular1"
         android:layout_width="350dp"
         android:layout_height="322dp"
-        android:layout_marginTop="392dp"
+        android:layout_marginTop="356dp"
+        android:fontFamily="@font/jostregular1"
         android:text="Lorem ipsum dolor"
         android:textColor="@color/white"
         android:textSize="18dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.488"
+        app:layout_constraintHorizontal_bias="0.508"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
