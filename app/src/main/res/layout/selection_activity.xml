@@ -13,11 +13,12 @@
     tools:context=".activities.MainActivity">
 
     <TextView
+        android:id="@+id/countryTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="25dp"
-        android:text="COUNTRY"
+        android:text="TICKET PRICES"
         android:textColor="#ffffff"
         android:textSize="28sp" />
 
@@ -84,7 +85,6 @@
         android:id="@+id/departurePriceTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="insert departure price"
         android:textSize="20sp" />
 
     <TextView
@@ -102,7 +102,6 @@
         android:id="@+id/returnPriceTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="insert return price"
         android:textSize="20sp" />
 
     <TextView
@@ -121,7 +120,6 @@
         android:id="@+id/totalPriceTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="insert total price"
         android:layout_weight="1"
         android:textSize="20sp" />
 
