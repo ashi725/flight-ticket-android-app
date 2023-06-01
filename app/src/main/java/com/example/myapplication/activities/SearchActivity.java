@@ -44,7 +44,6 @@ public class SearchActivity extends AppCompatActivity {
         noCountriesTextView = findViewById(R.id.noCountriesTextView);
         countriesGrid = findViewById(R.id.countries);
 
-
         countriesAdapter = new CountryAdaptor(this, R.layout.country_item, filteredCountryList);
 
         if (bySearch > 0) {
