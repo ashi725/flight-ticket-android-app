@@ -27,6 +27,17 @@
     </android.widget.SearchView>
 
 
+    <TextView
+        android:id="@+id/noCountriesTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="No countries in search"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:layout_weight="1"
+        android:visibility="gone" />
+
     <GridView
         android:layout_width="match_parent"
         android:layout_height="100dp"

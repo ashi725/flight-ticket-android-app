@@ -21,6 +21,8 @@ public class DetailsActivity extends AppCompatActivity {
     public static int byCountry = 0;
     public static String byCountryString;
 
+    boolean isFavourite = false;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,6 +33,16 @@ public class DetailsActivity extends AppCompatActivity {
         String countryName = intent.getStringExtra("countryName");
         String countryImage = intent.getStringExtra("countryImage");
         String countryDescription = intent.getStringExtra("countryDescription");
+
+        ImageView heartButton = (ImageView) findViewById(R.id.heartIcon);
+
+        // See if favourited
+        ArrayList<String> favouritesArray = FavouriteActivity.getFavouritesArray();
+        if (favouritesArray.contains(countryName)){
+            isFavourite = true;
+            heartButton.setImageResource(R.drawable.heart);
+        }
+
 
         // Update the views with the country details
         ImageView countryImageView = findViewById(R.id.detailsIcon);
@@ -76,11 +88,19 @@ public class DetailsActivity extends AppCompatActivity {
             }
         });
 
-        ImageView heartButton = (ImageView) findViewById(R.id.heartIcon);
-        homeButton.setOnClickListener(new View.OnClickListener(){
+        heartButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
-                FavouriteActivity.setFavouritesArray(countryName);
+                if (isFavourite) {
+                    heartButton.setImageResource(R.drawable.heart_outline);
+                    FavouriteActivity.removeFavouritesArray(countryName);
+                    isFavourite = false;
+                }
+                else{
+                    heartButton.setImageResource(R.drawable.heart);
+                    FavouriteActivity.setFavouritesArray(countryName);
+                    isFavourite = true;
+                }
             }
         });
 

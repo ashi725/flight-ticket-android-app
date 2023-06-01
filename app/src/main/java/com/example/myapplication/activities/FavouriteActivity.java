@@ -67,6 +67,15 @@ public class FavouriteActivity extends AppCompatActivity {
         return;
     }
 
+    public static void removeFavouritesArray(String countryName){
+        favouritesArray.remove(countryName);
+        return;
+    }
+
+    public static ArrayList<String> getFavouritesArray(){
+        return favouritesArray;
+    }
+
     public static void clearFavouritesArray(){
         favouritesArray.clear();
         return;

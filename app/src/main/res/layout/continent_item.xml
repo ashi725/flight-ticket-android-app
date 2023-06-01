@@ -21,7 +21,7 @@
         <ImageView
             android:id="@+id/continent_icon"
             android:layout_width="70dp"
-            android:layout_height="80dp"
+            android:layout_height="85dp"
             android:layout_marginLeft="15dp"
             android:layout_weight="1"
             android:src="@drawable/south_africa3" />
