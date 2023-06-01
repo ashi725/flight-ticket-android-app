@@ -29,6 +29,78 @@
           }
         },
         {
+          "name": "Uganada",
+          "image1": "kenya1",
+          "image2": "kenya2",
+          "image3": "kenya3",
+          "description": "Embark on a thrilling safari adventure in Kenya's vast savannahs. Witness the breathtaking landscapes of the Maasai Mara and encounter magnificent wildlife in their natural habitat. Immerse yourself in the rich cultural heritage of Kenya.",
+          "ticket_prices": {
+            "2023-06-01": 100,
+            "2023-06-02": 110,
+            "2023-06-03": 120
+          }
+        },
+        {
+          "name": "Namibia",
+          "image1": "kenya1",
+          "image2": "kenya2",
+          "image3": "kenya3",
+          "description": "Embark on a thrilling safari adventure in Kenya's vast savannahs. Witness the breathtaking landscapes of the Maasai Mara and encounter magnificent wildlife in their natural habitat. Immerse yourself in the rich cultural heritage of Kenya.",
+          "ticket_prices": {
+            "2023-06-01": 100,
+            "2023-06-02": 110,
+            "2023-06-03": 120
+          }
+        },
+        {
+          "name": "Rawanda",
+          "image1": "kenya1",
+          "image2": "kenya2",
+          "image3": "kenya3",
+          "description": "Embark on a thrilling safari adventure in Kenya's vast savannahs. Witness the breathtaking landscapes of the Maasai Mara and encounter magnificent wildlife in their natural habitat. Immerse yourself in the rich cultural heritage of Kenya.",
+          "ticket_prices": {
+            "2023-06-01": 100,
+            "2023-06-02": 110,
+            "2023-06-03": 120
+          }
+        },
+        {
+          "name": "Angola",
+          "image1": "kenya1",
+          "image2": "kenya2",
+          "image3": "kenya3",
+          "description": "Embark on a thrilling safari adventure in Kenya's vast savannahs. Witness the breathtaking landscapes of the Maasai Mara and encounter magnificent wildlife in their natural habitat. Immerse yourself in the rich cultural heritage of Kenya.",
+          "ticket_prices": {
+            "2023-06-01": 100,
+            "2023-06-02": 110,
+            "2023-06-03": 120
+          }
+        },
+        {
+          "name": "Togo",
+          "image1": "kenya1",
+          "image2": "kenya2",
+          "image3": "kenya3",
+          "description": "Embark on a thrilling safari adventure in Kenya's vast savannahs. Witness the breathtaking landscapes of the Maasai Mara and encounter magnificent wildlife in their natural habitat. Immerse yourself in the rich cultural heritage of Kenya.",
+          "ticket_prices": {
+            "2023-06-01": 100,
+            "2023-06-02": 110,
+            "2023-06-03": 120
+          }
+        },
+        {
+          "name": "Mali",
+          "image1": "kenya1",
+          "image2": "kenya2",
+          "image3": "kenya3",
+          "description": "Embark on a thrilling safari adventure in Kenya's vast savannahs. Witness the breathtaking landscapes of the Maasai Mara and encounter magnificent wildlife in their natural habitat. Immerse yourself in the rich cultural heritage of Kenya.",
+          "ticket_prices": {
+            "2023-06-01": 100,
+            "2023-06-02": 110,
+            "2023-06-03": 120
+          }
+        },
+        {
           "name": "Ghana",
           "image1": "ghana1",
           "image2": "ghana2",
