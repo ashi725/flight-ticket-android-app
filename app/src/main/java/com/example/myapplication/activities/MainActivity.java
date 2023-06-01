@@ -60,6 +60,24 @@ public class MainActivity extends AppCompatActivity {
         ListView continentsView = (ListView) findViewById(R.id.continents);
         continentsView.setAdapter((continentsAdapter));
 
+        ImageView searchButton = (ImageView) findViewById(R.id.searchButton);
+        searchButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                Intent searchIntent = new Intent(getBaseContext(), SearchActivity.class);
+                startActivity(searchIntent);
+            }
+        });
+
+        ImageView favouriteButton = (ImageView) findViewById(R.id.favouriteButton);
+        favouriteButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                Intent favouriteIntent = new Intent(getBaseContext(), FavouriteActivity.class);
+                startActivity(favouriteIntent);
+            }
+        });
+
         SearchView searchView = (SearchView) findViewById(R.id.searchView);
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override

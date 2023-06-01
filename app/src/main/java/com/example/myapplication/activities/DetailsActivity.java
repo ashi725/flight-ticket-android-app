@@ -75,6 +75,14 @@ public class DetailsActivity extends AppCompatActivity {
                 startActivity(homeIntent);
             }
         });
+
+        ImageView heartButton = (ImageView) findViewById(R.id.heartIcon);
+        homeButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                FavouriteActivity.setFavouritesArray(countryName);
+            }
+        });
     }
 
     public void onCheckPrices() {
