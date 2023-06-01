@@ -83,6 +83,15 @@ public class DetailsActivity extends AppCompatActivity {
                 FavouriteActivity.setFavouritesArray(countryName);
             }
         });
+
+        ImageView favouriteButton = (ImageView) findViewById(R.id.favouriteButton);
+        favouriteButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                Intent favouriteIntent = new Intent(getBaseContext(), FavouriteActivity.class);
+                startActivity(favouriteIntent);
+            }
+        });
     }
 
     public void onCheckPrices() {

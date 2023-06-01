@@ -51,7 +51,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.432"
-        app:srcCompat="@drawable/heart" />
+        app:srcCompat="@drawable/heart_outline" />
 
     <TextView
         android:id="@+id/countryTitle"
@@ -165,7 +165,7 @@
             android:src="@drawable/home" />
 
         <ImageView
-            android:id="@+id/categoriesDetails"
+            android:id="@+id/favouriteButton"
             android:layout_width="31dp"
             android:layout_height="28dp"
             android:layout_weight="1"
