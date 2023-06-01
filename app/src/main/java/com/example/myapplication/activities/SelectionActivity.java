@@ -90,9 +90,9 @@ public class SelectionActivity extends AppCompatActivity {
 
             double totalPrice = departurePrice + returnPrice;
 
-            departurePriceTextView.setText(String.valueOf(departurePrice));
-            returnPriceTextView.setText(String.valueOf(returnPrice));
-            totalPriceTextView.setText(String.valueOf(totalPrice));
+            departurePriceTextView.setText("$" + String.valueOf(departurePrice) + "0");
+            returnPriceTextView.setText("$" + String.valueOf(returnPrice)+ "0");
+            totalPriceTextView.setText("$" + String.valueOf(totalPrice)+ "0");
 
         } catch (Exception e) {
             e.printStackTrace();
