@@ -1,6 +1,7 @@
 package com.example.myapplication.activities;
 
 import android.content.Intent;
+import android.media.Image;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.GridView;
@@ -22,6 +23,12 @@ public class FavouriteActivity extends AppCompatActivity {
     public static int byContinent = 0;
     public static String byContinentString;
 
+    private ImageView brokenHeart;
+
+    private TextView noFavourites;
+
+    private GridView countries;
+
     public static ArrayList<String> favouritesArray = new ArrayList<>(); // Initialize the favouritesArray
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,7 +37,6 @@ public class FavouriteActivity extends AppCompatActivity {
 
         DataProvider dataProvider = new DataProvider(this, "data.json");
         List<Country> countryList = dataProvider.getCountry();
-
         List<Country> favouriteList = new ArrayList<>();
 
         for (Country country : countryList) {
@@ -39,6 +45,21 @@ public class FavouriteActivity extends AppCompatActivity {
             }
         }
         countryList = favouriteList;
+
+        brokenHeart = findViewById(R.id.brokenHeart);
+        noFavourites = findViewById(R.id.noFavouritesTextView);
+        countries = findViewById(R.id.countries);
+
+        if (countryList.isEmpty()) {
+            brokenHeart.setVisibility(View.VISIBLE);
+            noFavourites.setVisibility(View.VISIBLE);
+            countries.setVisibility(View.GONE);
+        } else {
+            brokenHeart.setVisibility(View.GONE);
+            noFavourites.setVisibility(View.GONE);
+            countries.setVisibility(View.VISIBLE);
+        }
+
 
         CountryAdaptor countriesAdapter = new CountryAdaptor(this,
                 R.layout.country_item, countryList);
@@ -54,6 +75,15 @@ public class FavouriteActivity extends AppCompatActivity {
                 startActivity(homeIntent);
             }
         });
+
+        ImageView searchButton = (ImageView) findViewById(R.id.searchButton);
+        searchButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                Intent searchIntent = new Intent(getBaseContext(), SearchActivity.class);
+                startActivity(searchIntent);
+            }
+        });
     }
 
     public void onViewCountryDetails(Country country) {
@@ -65,6 +95,15 @@ public class FavouriteActivity extends AppCompatActivity {
     public static void setFavouritesArray(String countryName){
         favouritesArray.add(countryName);
         return;
+    }
+
+    public static void removeFavouritesArray(String countryName){
+        favouritesArray.remove(countryName);
+        return;
+    }
+
+    public static ArrayList<String> getFavouritesArray(){
+        return favouritesArray;
     }
 
     public static void clearFavouritesArray(){

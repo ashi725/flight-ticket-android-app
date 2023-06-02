@@ -27,6 +27,18 @@
     </android.widget.SearchView>
 
 
+    <TextView
+        android:id="@+id/noCountriesTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:fontFamily="@font/jostregular1"
+        android:text="No countries \n found in search"
+        android:textColor="#FFFFFF"
+        android:textSize="25sp"
+        android:layout_weight="1"
+        android:visibility="gone" />
+
     <GridView
         android:layout_width="match_parent"
         android:layout_height="100dp"
@@ -52,14 +64,14 @@
             android:src="@drawable/home"/>
 
         <ImageView
-            android:id="@+id/imageView5"
+            android:id="@+id/favouriteButton"
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:layout_weight="1"
             android:src="@drawable/categories"/>
 
         <ImageView
-            android:id="@+id/imageView6"
+            android:id="@+id/searchButton"
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:layout_weight="1"

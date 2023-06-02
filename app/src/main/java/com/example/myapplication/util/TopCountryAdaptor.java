@@ -66,6 +66,19 @@ public class TopCountryAdaptor extends RecyclerView.Adapter<TopCountryAdaptor.Vi
 
         holder.iconImageView.setImageResource(i);
         holder.countryName.setText(currentCountry.getName());
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                DetailsActivity.byCountry = 1;
+                DetailsActivity.byCountryString = currentCountry.getName();
+                Intent intent = new Intent(mContext, DetailsActivity.class);
+                intent.putExtra("countryName", currentCountry.getName());
+                intent.putExtra("countryImage", currentCountry.getImage3());
+                intent.putExtra("countryDescription", currentCountry.getDescription());
+                mContext.startActivity(intent);
+            }
+        });
     }
 
     @Override

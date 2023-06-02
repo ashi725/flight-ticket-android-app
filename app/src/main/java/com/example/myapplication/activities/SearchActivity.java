@@ -28,6 +28,9 @@ public class SearchActivity extends AppCompatActivity {
     private List<Country> countryList;
     private List<Country> filteredCountryList;
     private CountryAdaptor countriesAdapter;
+    private GridView countriesGrid;
+
+    private TextView noCountriesTextView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,11 +41,15 @@ public class SearchActivity extends AppCompatActivity {
         countryList = dataProvider.getCountry();
         filteredCountryList = new ArrayList<>(countryList);
 
+        noCountriesTextView = findViewById(R.id.noCountriesTextView);
+        countriesGrid = findViewById(R.id.countries);
+
         countriesAdapter = new CountryAdaptor(this, R.layout.country_item, filteredCountryList);
 
         if (bySearch > 0) {
             filterCountries(searchString);
         }
+
 
         GridView gridView = findViewById(R.id.countries);
         gridView.setAdapter(countriesAdapter);
@@ -51,8 +58,18 @@ public class SearchActivity extends AppCompatActivity {
         homeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent listIntent = new Intent(getBaseContext(), MainActivity.class);
-                startActivity(listIntent);
+                searchString = "";
+                Intent homeIntent = new Intent(getBaseContext(), MainActivity.class);
+                startActivity(homeIntent);
+            }
+        });
+
+        ImageView favouriteButton = findViewById(R.id.favouriteButton);
+        favouriteButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent favouriteIntent = new Intent(getBaseContext(), FavouriteActivity.class);
+                startActivity(favouriteIntent);
             }
         });
 
@@ -83,6 +100,15 @@ public class SearchActivity extends AppCompatActivity {
                 }
             }
         }
+
+        if (filteredCountryList.isEmpty()) {
+            noCountriesTextView.setVisibility(View.VISIBLE);
+            countriesGrid.setVisibility(View.GONE);
+        } else {
+            noCountriesTextView.setVisibility(View.GONE);
+            countriesGrid.setVisibility(View.VISIBLE);
+        }
+
         countriesAdapter.notifyDataSetChanged();
     }
 }
