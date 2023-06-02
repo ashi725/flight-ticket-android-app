@@ -67,18 +67,20 @@ public class SelectionActivity extends AppCompatActivity {
     private void updateTicketPrices() {
         String departureDateStr = departureDateInput.getText().toString();
         String returnDateStr = returnDateInput.getText().toString();
-
+        String countryName = getIntent().getStringExtra("countryName");
+        System.out.println(countryName);
+    
         try {
             dataProvider = new DataProvider(this, "data.json");
-            double departurePrice = dataProvider.getPrice("Egypt", departureDateStr, "departure_ticket_prices");
-            double returnPrice = dataProvider.getPrice("Egypt", returnDateStr, "return_ticket_prices");
-
+            double departurePrice = dataProvider.getPrice(countryName, departureDateStr, "departure_ticket_prices");
+            double returnPrice = dataProvider.getPrice(countryName, returnDateStr, "return_ticket_prices");
+    
             double totalPrice = departurePrice + returnPrice;
-
-            departurePriceTextView.setText("$" + String.valueOf(departurePrice) + "0");
-            returnPriceTextView.setText("$" + String.valueOf(returnPrice)+ "0");
-            totalPriceTextView.setText("$" + String.valueOf(totalPrice)+ "0");
-
+    
+            departurePriceTextView.setText("$" + String.format("%.2f", departurePrice));
+            returnPriceTextView.setText("$" + String.format("%.2f", returnPrice));
+            totalPriceTextView.setText("$" + String.format("%.2f", totalPrice));
+    
         } catch (Exception e) {
             e.printStackTrace();
         }

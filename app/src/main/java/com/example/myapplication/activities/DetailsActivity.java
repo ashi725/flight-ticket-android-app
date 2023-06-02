@@ -20,6 +20,7 @@ public class DetailsActivity extends AppCompatActivity {
 
     public static int byCountry = 0;
     public static String byCountryString;
+    public static String countryName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,7 +29,7 @@ public class DetailsActivity extends AppCompatActivity {
 
         // Retrieve the passed country details
         Intent intent = getIntent();
-        String countryName = intent.getStringExtra("countryName");
+        countryName = intent.getStringExtra("countryName");
         String countryImage = intent.getStringExtra("countryImage");
         String countryDescription = intent.getStringExtra("countryDescription");
 
@@ -95,6 +96,8 @@ public class DetailsActivity extends AppCompatActivity {
     }
 
     public void onCheckPrices() {
-        startActivity(new Intent(DetailsActivity.this, SelectionActivity.class));
+        Intent intent = new Intent(DetailsActivity.this, SelectionActivity.class);
+        intent.putExtra("countryName", countryName);
+        startActivity(intent);
     }
 }
