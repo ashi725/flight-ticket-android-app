@@ -69,24 +69,9 @@ public class SelectionActivity extends AppCompatActivity {
         String returnDateStr = returnDateInput.getText().toString();
 
         try {
-            //dataProvider = new DataProvider(this, "data.json");
-            //double departurePrice = dataProvider.getPrice("Egypt", departureDateStr);
-            //double returnPrice = dataProvider.getPrice("Egypt", returnDateStr);
-
-            double departurePrice = 80.00;
-            double returnPrice = 120.00;
-
-            if (departureDateStr.equals("01-01-23")) {
-                departurePrice = 100.00;
-            } else {
-                departurePrice = 90.00;
-            }
-
-            if (returnDateStr.equals("02-02-23")) {
-                returnPrice = 80.00;
-            } else {
-                returnPrice = 120.00;
-            }
+            dataProvider = new DataProvider(this, "data.json");
+            double departurePrice = dataProvider.getPrice("Egypt", departureDateStr, "departure_ticket_prices");
+            double returnPrice = dataProvider.getPrice("Egypt", returnDateStr, "return_ticket_prices");
 
             double totalPrice = departurePrice + returnPrice;
 
