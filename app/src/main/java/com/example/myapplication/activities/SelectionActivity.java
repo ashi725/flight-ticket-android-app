@@ -24,6 +24,7 @@ import java.util.List;
 public class SelectionActivity extends AppCompatActivity {
     private EditText departureDateInput;
     private EditText returnDateInput;
+    private TextView countryTextView;
     private TextView departurePriceTextView;
     private TextView returnPriceTextView;
     private TextView totalPriceTextView;
@@ -38,6 +39,10 @@ public class SelectionActivity extends AppCompatActivity {
         setContentView(R.layout.selection_activity);
 
         this.dataProvider = App.getDataProvider();
+
+        countryTextView = findViewById(R.id.countryTextView);
+        String countryName = getIntent().getStringExtra("countryName");
+        countryTextView.setText(countryName + " Ticket Prices");
 
         departureDateInput = findViewById(R.id.departureDateInput);
         returnDateInput = findViewById(R.id.returnDateInput);
