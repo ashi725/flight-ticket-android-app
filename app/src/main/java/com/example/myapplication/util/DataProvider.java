@@ -55,7 +55,7 @@ public class DataProvider {
 
         return countryList;
     }
-  
+
     public List<Continent> getContinents() {
         List<Continent> continentList = new ArrayList<>();
 
@@ -78,27 +78,24 @@ public class DataProvider {
         return continentList;
     }
 
-    public double getPrice(String countryName, String date) {
+    public double getPrice(String countryName, String date, String ticketType) {
         try {
             String jsonData = loadJSONFromAsset();
             JSONObject jsonRootObject = new JSONObject(jsonData);
             JSONArray continentsArray = jsonRootObject.getJSONArray("continents");
 
-
             for (int i = 0; i < continentsArray.length(); i++) {
-                System.out.println("continent " + continentsArray.getJSONObject(i));
                 JSONObject continentObject = continentsArray.getJSONObject(i);
                 JSONArray countriesArray = continentObject.getJSONArray("countries");
 
                 for (int j = 0; j < countriesArray.length(); j++) {
-                    System.out.println("country " + countriesArray.getJSONObject(j));
-
                     JSONObject countryObject = countriesArray.getJSONObject(j);
                     String name = countryObject.getString("name");
 
                     if (name.equals(countryName)) {
-                        JSONArray ticketPricesObject = countryObject.getJSONArray("ticket_prices");
-                        double price = ticketPricesObject.getDouble(0);
+                        JSONObject ticketPricesObject = countryObject.getJSONObject(ticketType);
+                        
+                        double price = ticketPricesObject.getDouble(date);
                         return price;
                     }
                 }
@@ -109,6 +106,7 @@ public class DataProvider {
 
         return 0.0;
     }
+
 
 
     private String loadJSONFromAsset() {

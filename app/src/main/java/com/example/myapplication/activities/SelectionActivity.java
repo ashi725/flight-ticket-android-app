@@ -24,6 +24,7 @@ import java.util.List;
 public class SelectionActivity extends AppCompatActivity {
     private EditText departureDateInput;
     private EditText returnDateInput;
+    private TextView countryTextView;
     private TextView departurePriceTextView;
     private TextView returnPriceTextView;
     private TextView totalPriceTextView;
@@ -38,6 +39,10 @@ public class SelectionActivity extends AppCompatActivity {
         setContentView(R.layout.selection_activity);
 
         this.dataProvider = App.getDataProvider();
+
+        countryTextView = findViewById(R.id.countryTextView);
+        String countryName = getIntent().getStringExtra("countryName");
+        countryTextView.setText(countryName + " Ticket Prices");
 
         departureDateInput = findViewById(R.id.departureDateInput);
         returnDateInput = findViewById(R.id.returnDateInput);
@@ -85,33 +90,20 @@ public class SelectionActivity extends AppCompatActivity {
     private void updateTicketPrices() {
         String departureDateStr = departureDateInput.getText().toString();
         String returnDateStr = returnDateInput.getText().toString();
-
+        String countryName = getIntent().getStringExtra("countryName");
+        System.out.println(countryName);
+    
         try {
-            //dataProvider = new DataProvider(this, "data.json");
-            //double departurePrice = dataProvider.getPrice("Egypt", departureDateStr);
-            //double returnPrice = dataProvider.getPrice("Egypt", returnDateStr);
-
-            double departurePrice = 80.00;
-            double returnPrice = 120.00;
-
-            if (departureDateStr.equals("01-01-23")) {
-                departurePrice = 100.00;
-            } else {
-                departurePrice = 90.00;
-            }
-
-            if (returnDateStr.equals("02-02-23")) {
-                returnPrice = 80.00;
-            } else {
-                returnPrice = 120.00;
-            }
-
+            dataProvider = new DataProvider(this, "data.json");
+            double departurePrice = dataProvider.getPrice(countryName, departureDateStr, "departure_ticket_prices");
+            double returnPrice = dataProvider.getPrice(countryName, returnDateStr, "return_ticket_prices");
+    
             double totalPrice = departurePrice + returnPrice;
-
-            departurePriceTextView.setText("$" + String.valueOf(departurePrice) + "0");
-            returnPriceTextView.setText("$" + String.valueOf(returnPrice)+ "0");
-            totalPriceTextView.setText("$" + String.valueOf(totalPrice)+ "0");
-
+    
+            departurePriceTextView.setText("$" + String.format("%.2f", departurePrice));
+            returnPriceTextView.setText("$" + String.format("%.2f", returnPrice));
+            totalPriceTextView.setText("$" + String.format("%.2f", totalPrice));
+    
         } catch (Exception e) {
             e.printStackTrace();
         }

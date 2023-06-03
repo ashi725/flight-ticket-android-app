@@ -10,10 +10,15 @@
           "image2": "egypt2",
           "image3": "egypt3",
           "description": "Explore the ancient wonders of Egypt, a country rich in history and culture. From the majestic pyramids to the stunning Nile River, immerse yourself in a land of pharaohs and ancient mysteries.",
-          "ticket_prices": {
+          "departure_ticket_prices": {
             "2023-06-01": 100,
             "2023-06-02": 110,
             "2023-06-03": 120
+          },
+          "return_ticket_prices": {
+            "2023-06-01": 80,
+            "2023-06-02": 90,
+            "2023-06-03": 100
           }
         },
         {
@@ -22,10 +27,15 @@
           "image2": "kenya2",
           "image3": "kenya3",
           "description": "Embark on a thrilling safari adventure in Kenya's vast savannahs. Witness the breathtaking landscapes of the Maasai Mara and encounter magnificent wildlife in their natural habitat. Immerse yourself in the rich cultural heritage of Kenya.",
-          "ticket_prices": {
+          "departure_ticket_prices": {
             "2023-06-01": 100,
             "2023-06-02": 110,
             "2023-06-03": 120
+          },
+          "return_ticket_prices": {
+            "2023-06-01": 80,
+            "2023-06-02": 90,
+            "2023-06-03": 100
           }
         },
         {
@@ -34,10 +44,15 @@
           "image2": "kenya2",
           "image3": "kenya3",
           "description": "Embark on a thrilling safari adventure in Kenya's vast savannahs. Witness the breathtaking landscapes of the Maasai Mara and encounter magnificent wildlife in their natural habitat. Immerse yourself in the rich cultural heritage of Kenya.",
-          "ticket_prices": {
+          "departure_ticket_prices": {
             "2023-06-01": 100,
             "2023-06-02": 110,
             "2023-06-03": 120
+          },
+          "return_ticket_prices": {
+            "2023-06-01": 80,
+            "2023-06-02": 90,
+            "2023-06-03": 100
           }
         },
         {
@@ -46,10 +61,15 @@
           "image2": "kenya2",
           "image3": "kenya3",
           "description": "Embark on a thrilling safari adventure in Kenya's vast savannahs. Witness the breathtaking landscapes of the Maasai Mara and encounter magnificent wildlife in their natural habitat. Immerse yourself in the rich cultural heritage of Kenya.",
-          "ticket_prices": {
+          "departure_ticket_prices": {
             "2023-06-01": 100,
             "2023-06-02": 110,
             "2023-06-03": 120
+          },
+          "return_ticket_prices": {
+            "2023-06-01": 80,
+            "2023-06-02": 90,
+            "2023-06-03": 100
           }
         },
         {
@@ -58,10 +78,15 @@
           "image2": "kenya2",
           "image3": "kenya3",
           "description": "Embark on a thrilling safari adventure in Kenya's vast savannahs. Witness the breathtaking landscapes of the Maasai Mara and encounter magnificent wildlife in their natural habitat. Immerse yourself in the rich cultural heritage of Kenya.",
-          "ticket_prices": {
+          "departure_ticket_prices": {
             "2023-06-01": 100,
             "2023-06-02": 110,
             "2023-06-03": 120
+          },
+          "return_ticket_prices": {
+            "2023-06-01": 80,
+            "2023-06-02": 90,
+            "2023-06-03": 100
           }
         },
         {
@@ -70,10 +95,15 @@
           "image2": "kenya2",
           "image3": "kenya3",
           "description": "Embark on a thrilling safari adventure in Kenya's vast savannahs. Witness the breathtaking landscapes of the Maasai Mara and encounter magnificent wildlife in their natural habitat. Immerse yourself in the rich cultural heritage of Kenya.",
-          "ticket_prices": {
+          "departure_ticket_prices": {
             "2023-06-01": 100,
             "2023-06-02": 110,
             "2023-06-03": 120
+          },
+          "return_ticket_prices": {
+            "2023-06-01": 80,
+            "2023-06-02": 90,
+            "2023-06-03": 100
           }
         },
         {
@@ -82,10 +112,15 @@
           "image2": "kenya2",
           "image3": "kenya3",
           "description": "Embark on a thrilling safari adventure in Kenya's vast savannahs. Witness the breathtaking landscapes of the Maasai Mara and encounter magnificent wildlife in their natural habitat. Immerse yourself in the rich cultural heritage of Kenya.",
-          "ticket_prices": {
+          "departure_ticket_prices": {
             "2023-06-01": 100,
             "2023-06-02": 110,
             "2023-06-03": 120
+          },
+          "return_ticket_prices": {
+            "2023-06-01": 80,
+            "2023-06-02": 90,
+            "2023-06-03": 100
           }
         },
         {
@@ -94,10 +129,15 @@
           "image2": "kenya2",
           "image3": "kenya3",
           "description": "Embark on a thrilling safari adventure in Kenya's vast savannahs. Witness the breathtaking landscapes of the Maasai Mara and encounter magnificent wildlife in their natural habitat. Immerse yourself in the rich cultural heritage of Kenya.",
-          "ticket_prices": {
+          "departure_ticket_prices": {
             "2023-06-01": 100,
             "2023-06-02": 110,
             "2023-06-03": 120
+          },
+          "return_ticket_prices": {
+            "2023-06-01": 80,
+            "2023-06-02": 90,
+            "2023-06-03": 100
           }
         },
         {
@@ -106,10 +146,15 @@
           "image2": "ghana2",
           "image3": "ghana3",
           "description": "Discover Ghana's vibrant culture and warm hospitality. Explore historical landmarks and bustling markets, and indulge in the unique blend of history, music, and flavors. Experience the captivating beauty of this West African gem.",
-          "ticket_prices": {
+          "departure_ticket_prices": {
             "2023-06-01": 100,
             "2023-06-02": 110,
             "2023-06-03": 120
+          },
+          "return_ticket_prices": {
+            "2023-06-01": 80,
+            "2023-06-02": 90,
+            "2023-06-03": 100
           }
         },
         {
@@ -118,9 +163,14 @@
           "image2": "south_africa2",
           "image3": "south_africa3",
           "description": "Experience the breathtaking beauty of South Africa, from iconic Table Mountain to stunning coastal landscapes. Immerse yourself in rich wildlife and vibrant cities, where adventure and culture await at every turn.",
-          "ticket_prices": {
-            "2023-06-01": 90,
-            "2023-06-02": 95,
+          "departure_ticket_prices": {
+            "2023-06-01": 100,
+            "2023-06-02": 110,
+            "2023-06-03": 120
+          },
+          "return_ticket_prices": {
+            "2023-06-01": 80,
+            "2023-06-02": 90,
             "2023-06-03": 100
           }
         }
@@ -136,10 +186,15 @@
           "image2": "china2",
           "image3": "china3",
           "description": "Discover the wonders of China, a country with a rich history and diverse landscapes. Explore the Great Wall, experience the bustling cities of Beijing and Shanghai, and immerse yourself in ancient traditions and modern marvels.",
-          "ticket_prices": {
-            "2023-06-01": 150,
-            "2023-06-02": 160,
-            "2023-06-03": 170
+          "departure_ticket_prices": {
+            "2023-06-01": 100,
+            "2023-06-02": 110,
+            "2023-06-03": 120
+          },
+          "return_ticket_prices": {
+            "2023-06-01": 80,
+            "2023-06-02": 90,
+            "2023-06-03": 100
           }
         },
         {
@@ -148,10 +203,15 @@
           "image2": "india2",
           "image3": "india3",
           "description": "Experience the vibrant culture and diverse landscapes of India. Explore historical landmarks like the Taj Mahal, witness the spirituality of Varanasi, and indulge in the flavors of Indian cuisine. Immerse yourself in a country of enchanting contrasts.",
-          "ticket_prices": {
-            "2023-06-01": 120,
-            "2023-06-02": 125,
-            "2023-06-03": 130
+          "departure_ticket_prices": {
+            "2023-06-01": 100,
+            "2023-06-02": 110,
+            "2023-06-03": 120
+          },
+          "return_ticket_prices": {
+            "2023-06-01": 80,
+            "2023-06-02": 90,
+            "2023-06-03": 100
           }
         }
       ]
@@ -166,10 +226,15 @@
           "image2": "france2",
           "image3": "france3",
           "description": "Experience the allure of France, a country renowned for its art, history, and cuisine. From the romantic streets of Paris to the sun-kissed beaches of the French Riviera, immerse yourself in the elegance and charm of this captivating European destination.",
-          "ticket_prices": {
-            "2023-06-01": 180,
-            "2023-06-02": 190,
-            "2023-06-03": 200
+          "departure_ticket_prices": {
+            "2023-06-01": 100,
+            "2023-06-02": 110,
+            "2023-06-03": 120
+          },
+          "return_ticket_prices": {
+            "2023-06-01": 80,
+            "2023-06-02": 90,
+            "2023-06-03": 100
           }
         },
         {
@@ -178,10 +243,15 @@
           "image2": "germany2",
           "image3": "germany3",
           "description": "Discover Germany's rich heritage of engineering and technology. Explore charming cities like Berlin and Munich, indulge in delicious cuisine, and immerse yourself in a country known for its cultural diversity and stunning landscapes.",
-          "ticket_prices": {
-            "2023-06-01": 160,
-            "2023-06-02": 165,
-            "2023-06-03": 170
+          "departure_ticket_prices": {
+            "2023-06-01": 100,
+            "2023-06-02": 110,
+            "2023-06-03": 120
+          },
+          "return_ticket_prices": {
+            "2023-06-01": 80,
+            "2023-06-02": 90,
+            "2023-06-03": 100
           }
         },
         {
@@ -190,10 +260,15 @@
           "image2": "italy2",
           "image3": "italy3",
           "description": "Experience the art, history, and culinary delights of Italy. From the ancient ruins of Rome to the picturesque canals of Venice, immerse yourself in a country that perfectly blends old-world charm with breathtaking landscapes and vibrant city life.",
-          "ticket_prices": {
-            "2023-06-01": 170,
-            "2023-06-02": 175,
-            "2023-06-03": 180
+          "departure_ticket_prices": {
+            "2023-06-01": 100,
+            "2023-06-02": 110,
+            "2023-06-03": 120
+          },
+          "return_ticket_prices": {
+            "2023-06-01": 80,
+            "2023-06-02": 90,
+            "2023-06-03": 100
           }
         }
       ]
@@ -208,10 +283,15 @@
           "image2": "us2",
           "image3": "us3",
           "description": "Explore the diverse landscapes and iconic landmarks of the United States. From the bustling streets of New York City to the natural wonders of the Grand Canyon, embark on an unforgettable journey through a country of endless possibilities.",
-          "ticket_prices": {
-            "2023-06-01": 200,
-            "2023-06-02": 210,
-            "2023-06-03": 220
+          "departure_ticket_prices": {
+            "2023-06-01": 100,
+            "2023-06-02": 110,
+            "2023-06-03": 120
+          },
+          "return_ticket_prices": {
+            "2023-06-01": 80,
+            "2023-06-02": 90,
+            "2023-06-03": 100
           }
         },
         {
@@ -220,10 +300,15 @@
           "image2": "canada2",
           "image3": "canada3",
           "description": "Discover the vast landscapes and untouched wilderness of Canada. From the majestic Rocky Mountains to the vibrant city life of Toronto and Vancouver, immerse yourself in a country known for its natural beauty and welcoming spirit.",
-          "ticket_prices": {
-            "2023-06-01": 190,
-            "2023-06-02": 195,
-            "2023-06-03": 200
+          "departure_ticket_prices": {
+            "2023-06-01": 100,
+            "2023-06-02": 110,
+            "2023-06-03": 120
+          },
+          "return_ticket_prices": {
+            "2023-06-01": 80,
+            "2023-06-02": 90,
+            "2023-06-03": 100
           }
         },
         {
@@ -232,10 +317,15 @@
           "image2": "mexico2",
           "image3": "mexico3",
           "description": "Experience the rich culture and breathtaking landscapes of Mexico. From the ancient ruins of Chichen Itza to the stunning beaches of Cancun, immerse yourself in a country that offers a perfect blend of history, natural beauty, and vibrant traditions.",
-          "ticket_prices": {
-            "2023-06-01": 150,
-            "2023-06-02": 155,
-            "2023-06-03": 160
+          "departure_ticket_prices": {
+            "2023-06-01": 100,
+            "2023-06-02": 110,
+            "2023-06-03": 120
+          },
+          "return_ticket_prices": {
+            "2023-06-01": 80,
+            "2023-06-02": 90,
+            "2023-06-03": 100
           }
         }
       ]
