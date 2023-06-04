@@ -75,6 +75,8 @@ public class TopCountryAdaptor extends RecyclerView.Adapter<TopCountryAdaptor.Vi
                 Intent intent = new Intent(mContext, DetailsActivity.class);
                 intent.putExtra("countryName", currentCountry.getName());
                 intent.putExtra("countryImage", currentCountry.getImage3());
+                intent.putExtra("countryImage1", currentCountry.getImage1());
+                intent.putExtra("countryImage2", currentCountry.getImage2());
                 intent.putExtra("countryDescription", currentCountry.getDescription());
                 mContext.startActivity(intent);
             }
