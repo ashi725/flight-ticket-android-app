@@ -91,6 +91,7 @@ public class CountryAdaptor extends ArrayAdapter {
                     intent.putExtra("countryImage", currentCountry.getImage3());
                     intent.putExtra("countryImage1", currentCountry.getImage1());
                     intent.putExtra("countryImage2", currentCountry.getImage2());
+                    intent.putExtra("averagePrice", currentCountry.getAveragePrice());
                     intent.putExtra("countryDescription", currentCountry.getDescription());
                     mContext.startActivity(intent);
                 }
