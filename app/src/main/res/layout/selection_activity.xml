@@ -40,7 +40,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:inputType="date" />
+        android:inputType="date"
+        android:hint="yyyy-mm-dd" />
 
     <TextView
         android:id="@+id/textView18"
@@ -60,7 +61,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:inputType="date" />
+        android:inputType="date"
+        android:hint="yyyy-mm-dd" />
 
     <Button
         android:id="@+id/priceButton"
