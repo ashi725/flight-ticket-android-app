@@ -11,6 +11,7 @@ import androidx.core.content.ContextCompat;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -56,7 +57,7 @@ public class DetailsActivity extends AppCompatActivity {
 
         // Set country image
         int imageResId;
-        if (countryImage != null && !countryImage.isEmpty()) {
+        if (countryImage != null) {
             imageResId = getResources().getIdentifier(countryImage, "drawable", getPackageName());
         } else {
             imageResId= getResources().getIdentifier("japan3", "drawable", getPackageName());
@@ -68,7 +69,7 @@ public class DetailsActivity extends AppCompatActivity {
         Drawable drawableIcon = ContextCompat.getDrawable(this, imageResId);
 
         int firstSlide;
-        if (countryImage1 != null && !countryImage1.isEmpty()) {
+        if (countryImage1 != null) {
             firstSlide = getResources().getIdentifier(countryImage1, "drawable", getPackageName());
         } else {
             firstSlide = getResources().getIdentifier("japan1", "drawable", getPackageName());
@@ -80,7 +81,7 @@ public class DetailsActivity extends AppCompatActivity {
 
         // Get country image 2
         int secondSlide;
-        if (countryImage2 != null && !countryImage2.isEmpty()) {
+        if (countryImage2 != null) {
             secondSlide = getResources().getIdentifier(countryImage2, "drawable", getPackageName());
         } else {
             secondSlide = getResources().getIdentifier("japan2", "drawable", getPackageName());
