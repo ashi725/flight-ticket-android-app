@@ -59,7 +59,10 @@ public class DetailsActivity extends AppCompatActivity {
         if (countryImage != null && !countryImage.isEmpty()) {
             imageResId = getResources().getIdentifier(countryImage, "drawable", getPackageName());
         } else {
-            imageResId= getResources().getIdentifier("japan2", "drawable", getPackageName());
+            imageResId= getResources().getIdentifier("japan3", "drawable", getPackageName());
+        }
+        if (imageResId == 0){
+            imageResId = getResources().getIdentifier("japan3", "drawable", getPackageName());
         }
         countryImageView.setImageResource(imageResId);
         Drawable drawableIcon = ContextCompat.getDrawable(this, imageResId);
@@ -70,6 +73,9 @@ public class DetailsActivity extends AppCompatActivity {
         } else {
             firstSlide = getResources().getIdentifier("japan1", "drawable", getPackageName());
         }
+        if (firstSlide == 0){
+            firstSlide = getResources().getIdentifier("japan1", "drawable", getPackageName());
+        }
         Drawable drawable1 = ContextCompat.getDrawable(this, firstSlide);
 
         // Get country image 2
@@ -77,6 +83,9 @@ public class DetailsActivity extends AppCompatActivity {
         if (countryImage2 != null && !countryImage2.isEmpty()) {
             secondSlide = getResources().getIdentifier(countryImage2, "drawable", getPackageName());
         } else {
+            secondSlide = getResources().getIdentifier("japan2", "drawable", getPackageName());
+        }
+        if (secondSlide == 0){
             secondSlide = getResources().getIdentifier("japan2", "drawable", getPackageName());
         }
         Drawable drawable2 = ContextCompat.getDrawable(this, secondSlide);
