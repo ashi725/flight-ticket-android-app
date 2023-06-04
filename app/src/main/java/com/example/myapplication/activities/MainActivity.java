@@ -15,10 +15,13 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.SearchView;
+import android.widget.TextView;
 
 import java.util.List;
 import java.util.ArrayList;
@@ -38,6 +41,18 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_activity);
+
+        // Fade-in animation
+        Animation fadeInAnimation = AnimationUtils.loadAnimation(this, R.anim.fade_in);
+
+        TextView greetingText = findViewById(R.id.greetingText);
+        ImageView imageView = findViewById(R.id.imageView);
+        ImageView favouriteButton = findViewById(R.id.favouriteButton);
+        ImageView searchButton = findViewById(R.id.searchButton);
+        greetingText.startAnimation(fadeInAnimation);
+        imageView.startAnimation(fadeInAnimation);
+        favouriteButton.startAnimation(fadeInAnimation);
+        searchButton.startAnimation(fadeInAnimation);
 
         DataProvider dataProvider = new DataProvider(this, "data.json");
         List<Country> countryList = dataProvider.getCountry();
@@ -60,7 +75,6 @@ public class MainActivity extends AppCompatActivity {
         ListView continentsView = (ListView) findViewById(R.id.continents);
         continentsView.setAdapter((continentsAdapter));
 
-        ImageView searchButton = (ImageView) findViewById(R.id.searchButton);
         searchButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
@@ -69,7 +83,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        ImageView favouriteButton = (ImageView) findViewById(R.id.favouriteButton);
         favouriteButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
