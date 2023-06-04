@@ -6,8 +6,10 @@ import com.denzcoskun.imageslider.ImageSlider;
 import java.util.ArrayList;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -33,6 +35,8 @@ public class DetailsActivity extends AppCompatActivity {
         Intent intent = getIntent();
         countryName = intent.getStringExtra("countryName");
         String countryImage = intent.getStringExtra("countryImage");
+        String countryImage1 = intent.getStringExtra("countryImage1");
+        String countryImage2 = intent.getStringExtra("countryImage2");
         String countryDescription = intent.getStringExtra("countryDescription");
 
         ImageView heartButton = (ImageView) findViewById(R.id.heartIcon);
@@ -44,7 +48,6 @@ public class DetailsActivity extends AppCompatActivity {
             heartButton.setImageResource(R.drawable.heart);
         }
 
-
         // Update the views with the country details
         ImageView countryImageView = findViewById(R.id.detailsIcon);
         TextView countryTitle = findViewById(R.id.countryTitle);
@@ -52,20 +55,43 @@ public class DetailsActivity extends AppCompatActivity {
         TextView description = findViewById(R.id.description);
 
         // Set country image
-        int imageResId = getResources().getIdentifier(countryImage, "drawable", getPackageName());
+        int imageResId;
+        if (countryImage != null && !countryImage.isEmpty()) {
+            imageResId = getResources().getIdentifier(countryImage, "drawable", getPackageName());
+        } else {
+            imageResId= getResources().getIdentifier("japan2", "drawable", getPackageName());
+        }
         countryImageView.setImageResource(imageResId);
+        Drawable drawableIcon = ContextCompat.getDrawable(this, imageResId);
+
+        int firstSlide;
+        if (countryImage1 != null && !countryImage1.isEmpty()) {
+            firstSlide = getResources().getIdentifier(countryImage1, "drawable", getPackageName());
+        } else {
+            firstSlide = getResources().getIdentifier("japan1", "drawable", getPackageName());
+        }
+        Drawable drawable1 = ContextCompat.getDrawable(this, firstSlide);
+
+        // Get country image 2
+        int secondSlide;
+        if (countryImage2 != null && !countryImage2.isEmpty()) {
+            secondSlide = getResources().getIdentifier(countryImage2, "drawable", getPackageName());
+        } else {
+            secondSlide = getResources().getIdentifier("japan2", "drawable", getPackageName());
+        }
+        Drawable drawable2 = ContextCompat.getDrawable(this, secondSlide);
+
+        // Set image slider
+        ArrayList<SlideModel> imageList = new ArrayList<>();
+
+        imageList.add(new SlideModel(firstSlide, ScaleTypes.CENTER_CROP));
+        imageList.add(new SlideModel(secondSlide, ScaleTypes.CENTER_CROP));
+        imageList.add(new SlideModel(imageResId, ScaleTypes.CENTER_CROP));
 
         // Set country title and description
         countryTitle.setText(countryName);
         whyCountry.setText("Why " + countryName + "?");
         description.setText(countryDescription);
-
-        // Set image slider
-        ArrayList<SlideModel> imageList = new ArrayList<>();
-
-        imageList.add(new SlideModel(R.drawable.japan1, ScaleTypes.CENTER_CROP));
-        imageList.add(new SlideModel(R.drawable.japan2, ScaleTypes.CENTER_CROP));
-        imageList.add(new SlideModel(R.drawable.japan3, ScaleTypes.CENTER_CROP));
 
         ImageSlider imageSlider = findViewById(R.id.image_slider);
         imageSlider.setImageList(imageList);

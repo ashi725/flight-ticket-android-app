@@ -213,6 +213,23 @@
             "2023-06-02": 90,
             "2023-06-03": 100
           }
+        },
+        {
+          "name": "Japan",
+          "image1": "japan1",
+          "image2": "japan2",
+          "image3": "japan3",
+          "description": "Experience Japan, a beautiful country in east asia",
+          "departure_ticket_prices": {
+            "2023-06-01": 100,
+            "2023-06-02": 110,
+            "2023-06-03": 120
+          },
+          "return_ticket_prices": {
+            "2023-06-01": 80,
+            "2023-06-02": 90,
+            "2023-06-03": 100
+          }
         }
       ]
     },
